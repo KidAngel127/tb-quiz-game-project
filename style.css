@@ -1,4 +1,4 @@
-.welcome{
+.welcome, .question-container{
     border: 1px solid black;
     font-family: verdana;
     height: 250px;
@@ -18,4 +18,18 @@ p{
 }
 #btnBegin{
     padding: 20px 30px;
+}
+.hide{
+    display: none;
+}
+.question{
+    color: balck;
+}
+.answer{
+    color: blue;
+}
+div.answer:hover,
+div.answer:active{
+    color: white;
+    background-color: blue;
 }
