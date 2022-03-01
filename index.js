@@ -7,17 +7,32 @@ function setCountDownTimer(){
 }
 
 //when person clicks the begin button timer start
-//Question is asked
+//Start time
+function startTimer(){
 timerInterval = setInterval(updateTimer, 1000);
+}
 
 function updateTimer(){
-    countDownTimer = countDownTimern - 1;
+    countDownTimer--;
+    showTimer();
+}
+
+function showTimer() {
+    let currentTime = document.getElementById('timer');
+    currentTime.innerText = countDownTimer;
+}
+
+function showScoreBoard() {
+    let scoreBoard =document.getElementById('score-board');
+    //scoreBoard.classList.toggle('hide', false);
+    scoreBoard.classList.remove('hide');
 }
 
 //question is asked
 function SetupQuestions(){
+    console.log("SetupQuestions started")
     let question1 = {
-        id: "quest8",
+        id: "quest0",
         question: "To select elemnts with a specific class",
         answer1: "Text",
         answer2: "Text",
@@ -56,6 +71,12 @@ function showQuestion(questionindex) {
     newQuestion.innerText = arrayOfQuestions[questionindex].question;
     questionSection.appendChild()
 }
+
+function doGame() {
+    setCountDownTimer();
+    startTimer();
+}
+
 
 // if questio is correct next question
 // if question is incorrect time penalty
